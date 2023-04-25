@@ -1,0 +1,43 @@
+.btn {
+	font-family: 'Montserrat', sans-serif;
+	width: 100%;
+	font-weight: 500;
+	font-size: 14px;
+    line-height: 10px;
+	text-align: center;
+	text-transform: capitalize;
+	border-radius: 3px;
+	cursor: pointer;
+	outline: none;
+    padding: 12px 16px;
+
+	&__primary {
+		background: #0360ef;
+		color: #ffffff;
+		border: 1px solid #0360ef;
+	}
+
+	&__secondary {
+		background: #ffffff;
+		color: #0360ef;
+		border: 1px solid #0360ef;
+	}
+
+	&__positive {
+		background: #03cea4;
+		color: #ffffff;
+		border: 1px solid #03cea4;
+	}
+
+    &.disabled{
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+	.btn {
+		font-size: 12px;
+		padding: 6px 12px;
+	}
+}

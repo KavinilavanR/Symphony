@@ -1,0 +1,29 @@
+.toast-wrapper {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 2000;
+
+	.toast {
+		background: rgba(10, 14, 32, 0.883);
+		opacity: 0.6;
+		border-radius: 30px;
+		width: fit-content;
+        max-width: 70vw;
+        margin: auto;
+        margin-bottom: 1rem;
+
+		&__message {
+			color: #ffffff;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 23px;
+			padding: 10px 30px;
+			text-align: center;
+		}
+
+        &:last-child {
+			margin-bottom: 60px;
+		}
+	}
+}

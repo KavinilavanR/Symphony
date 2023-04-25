@@ -1,0 +1,308 @@
+.chat {
+    height: 100%;
+    width: 100%;
+
+    &__outer {
+        display: flex;
+        width: 100%;
+        height: calc(100% - 58px);
+    }
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        flex: 1 1 0%;
+        align-items: stretch;
+    }
+
+    &__header {
+        position: sticky;
+        top: 0;
+        display: flex;
+        gap: 20px;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px;
+        height: 58px;
+        width: 100%;
+        font-size: 20px;
+        color: #fff;
+        background-color: #0360ef;
+        z-index: 300;
+
+        &-logo {
+            cursor: pointer;
+        }
+
+        &-menu {
+            display: flex;
+            column-gap: 2rem;
+            margin-left: auto;
+            align-items: center;
+        }
+
+        &-sub-menu {
+            display: flex;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 21px;
+            cursor: pointer;
+            align-items: center;
+            column-gap: 0.7rem;
+
+            img {
+                max-width: 24px;
+                max-height: 24px;
+            }
+
+            &:last-child {
+                img {
+                    max-width: 18px;
+                    max-height: 18px;
+                }
+            }
+        }
+    }
+
+    &__header-sidebar-icon {
+        all: unset;
+        background: transparent;
+        cursor: pointer;
+
+        img {
+            width: 14px;
+            position: relative;
+            top: -1px;
+            margin-right: 5px;
+        }
+    }
+
+    &__container {
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 0 auto;
+        width: 100%;
+        padding: 15px 20px 1rem;
+        text-align: center;
+        background: linear-gradient(360deg, #ffffff 60%, rgba(255, 255, 255, 0) 86.25%);
+        mix-blend-mode: normal;
+        z-index: 10;
+
+        .scroll-to-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 0;
+            top: -40px;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #b3bac5;
+            border-radius: 50%;
+        }
+
+        &-info {
+            color: #7a869a;
+            font-size: 14px;
+            width: 85%;
+        }
+
+        &-divider {
+            margin: 1.5rem 0 1rem;
+            border: 0.5px solid rgba(20, 54, 105, 0.11);
+        }
+
+        &-shedule-demo {
+            display: flex;
+            width: 70%;
+            margin: auto;
+            column-gap: 2rem;
+            padding: 0.9rem;
+            background: rgba(3, 96, 239, 0.1);
+            border-radius: 20px;
+
+            &-content {
+                flex: 1;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 18px;
+                color: #42526E;
+                text-align: left;
+            }
+
+            &-action {
+                margin: auto;
+            }
+        }
+
+        &-trusted-clients {
+            &-text {
+                margin: 10px 0px 0px;
+                font-weight: 400;
+                font-size: 11px;
+                line-height: 14px;
+                color: #505F79;
+            }
+            &-logo {
+                display: flex;
+                column-gap: 43px;
+                justify-content: center;
+                height: 3vh;
+                max-height: 25px;
+            }
+        }
+    }
+    &__search-bar {
+        width: 100%;
+        max-width: 850px;
+        margin: 0 auto;
+        position: relative;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1250px) {
+    .chat {
+        &__footer {
+            &-info {
+                width: 90%;
+            }
+
+            &-shedule-demo {
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .chat {
+        &__outer {
+            height: calc(100% - 50px);
+        }
+        &__header {
+            gap: 10px;
+            height: 50px;
+
+            &-logo {
+                width: 30vw;
+            }
+
+            &-sub-menu {
+                img {
+                    height: 25px;
+                }
+            }
+        }
+
+        &__footer {
+            position: absolute;
+            padding: 15px 15px 0.7rem;
+
+            &-info {
+                font-size: 12px;
+                width: 100%;
+            }
+
+            &-divider {
+                margin: 1rem 0 0.7rem; 
+            }
+
+            &-shedule-demo {
+                column-gap: 1rem;
+                padding: 0.6rem 0.6rem;
+                width: 90%;
+                flex-direction: column;
+                
+                &-content {
+                    font-size: 13px;
+                    line-height: 17px;
+                    text-align: center;
+                }
+
+                &-action {
+                    padding-top: 8px;
+                }
+            }
+
+            &-trusted-clients {
+                &-text {
+                    margin: 0.3rem 0px -0.3rem;
+                    font-size: 11px;
+                    line-height: 14px;
+                }
+                &-logo {
+                    column-gap: 0.8rem;
+                }
+            }
+    
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .chat {
+        &__container {
+            margin-bottom: 225px;
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .chat {
+        &__header {
+            &-logo {
+                width: 32vw;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .chat {
+        &__header {
+            &-logo {
+                width: 37vw;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .chat {
+        &__header {
+            &-logo {
+                width: 43vw;
+            }
+        }
+
+        &__footer {
+            &-trusted-clients {
+                &-logo {
+                    column-gap: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .chat {
+        &__container {
+            padding-bottom: 170px;
+        }
+    }
+}

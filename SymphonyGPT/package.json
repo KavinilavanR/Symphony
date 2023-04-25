@@ -1,0 +1,42 @@
+{
+  "name": "ferma-gpt",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "lint": "npx eslint --fix \"{,!(node_modules|public|dist)/**/}*.{js,svelte}\"",
+    "format": "npx prettier --write \"{,!(node_modules|public|dist)/**/}*.{js,svelte}\"",
+    "preview": "vite preview",
+    "dev": "vite --config config/vite.config.js --host",
+    "build": "vite --config config/vite.config.js build"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.0.2",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.33.0",
+    "eslint-plugin-svelte3": "^4.0.0",
+    "msw": "^1.1.0",
+    "postcss": "^8.4.21",
+    "postcss-load-config": "^4.0.1",
+    "postcss-normalize": "^10.0.1",
+    "postcss-preset-env": "^8.0.1",
+    "prettier": "^2.8.3",
+    "prettier-plugin-svelte": "^2.9.0",
+    "sass": "^1.58.0",
+    "svelte": "^3.55.1",
+    "svelte-preprocess": "^5.0.1",
+    "vite": "^4.1.1"
+  },
+  "dependencies": {
+    "log4js": "^6.9.1",
+    "pptxgenjs": "^3.11.0",
+    "svelte-spa-router": "^3.3.0",
+    "uuid": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "msw": {
+    "workerDirectory": "public"
+  }
+}
